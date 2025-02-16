@@ -15,18 +15,42 @@
   transform: scale(0.95);
 }
 
-.overdue {
-  color: rgb(255, 110, 110);
+/* ✅ Tâche terminée le jour même */
+.done-today {
+  color: rgb(135, 228, 135);
   font-weight: bold;
 }
 
-.overdue-text {
-  color: rgb(255, 110, 110);
+/* 🟡 1 jour de retard */
+.late-yellow {
+  color: #d9c179; /* Jaune */
+  font-weight: bold;
+}
 
+/* 🟠 2 jours de retard */
+.late-orange {
+  color: #dca970;
+  font-weight: bold;
+}
+
+/* 🔴 3-4 jours de retard */
+.late-red-light {
+  color: #c66a4f; /* Rouge clair */
+  font-weight: bold;
+}
+
+/* 🔥 5 jours ou plus de retard */
+.late-red-dark {
+  color: #bf3a47; /* Rouge foncé */
+  font-weight: bold;
+}
+
+/* Texte d'affichage du retard */
+.late-text {
+  font-size: 14px;
   font-weight: bold;
   margin-left: 10px;
 }
-
 .App {
   text-align: center;
 }

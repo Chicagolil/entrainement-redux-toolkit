@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "./redux";
+import dayjs from "dayjs";
 
 const TaskForm = () => {
   const [text, setText] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(dayjs().format("YYYY-MM-DD"));
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addTask({ text, date }));
     setText("");
-    setDate("");
+    setDate(dayjs().format("YYYY-MM-DD"));
   };
 
   return (

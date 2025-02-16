@@ -16,18 +16,12 @@
       "id": "07aa",
       "text": "Aller chercher le meta quest à la fnac ",
       "date": "2025-02-16",
-      "done": false
+      "done": true
     },
     {
       "id": "df34",
       "text": "Envoyer un message à papi",
       "date": "2025-02-16",
-      "done": false
-    },
-    {
-      "id": "8a23",
-      "text": "Pipi",
-      "date": "2025-02-17",
       "done": false
     }
   ]
