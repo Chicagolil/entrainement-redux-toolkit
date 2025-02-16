@@ -1,3 +1,32 @@
+.changerDate h1 {
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+  border-radius: 40px;
+}
+
+.changerDate h1:hover {
+  background-color: #216788;
+  transform: scale(1.05);
+}
+
+.changerDate h1:active {
+  transform: scale(0.95);
+}
+
+.overdue {
+  color: rgb(255, 110, 110);
+  font-weight: bold;
+}
+
+.overdue-text {
+  color: rgb(255, 110, 110);
+
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 .App {
   text-align: center;
 }

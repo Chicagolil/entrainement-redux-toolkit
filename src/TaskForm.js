@@ -4,14 +4,14 @@ import { addTask } from "./redux";
 
 const TaskForm = () => {
   const [text, setText] = useState("");
+  const [date, setDate] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (text.trim()) {
-      dispatch(addTask(text));
-      setText("");
-    }
+    dispatch(addTask({ text, date }));
+    setText("");
+    setDate("");
   };
 
   return (
@@ -22,6 +22,13 @@ const TaskForm = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
+      <label> Ajouter une date</label>
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+      />
+      <input type="submit" value="Ajouter" />
     </form>
   );
 };
