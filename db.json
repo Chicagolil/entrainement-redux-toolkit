@@ -30,12 +30,29 @@
     }
   ],
   "categories": [
-    "Travail",
-    "Personnel",
-    "Sport",
-    "Courses",
-    "Musique",
-    "TFE",
-    "Stages"
+    {
+      "id": "1",
+      "nom": "Travail"
+    },
+    {
+      "id": "2",
+      "nom": "Sport"
+    },
+    {
+      "id": "3",
+      "nom": "Courses"
+    },
+    {
+      "id": "4",
+      "nom": "Musique"
+    },
+    {
+      "id": "5",
+      "nom": "TFE"
+    },
+    {
+      "id": "6",
+      "nom": "Stages"
+    }
   ]
 }

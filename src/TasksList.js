@@ -5,6 +5,8 @@ import TaskItem from "./TaskItem";
 import dayjs from "dayjs";
 import "dayjs/locale/fr";
 import "./App.css";
+import { deleteCategories, fetchCategories } from "./redux/categorieSlice";
+
 dayjs.locale("fr");
 
 const TasksList = () => {
@@ -16,6 +18,7 @@ const TasksList = () => {
 
   useEffect(() => {
     dispatch(fetchTasks());
+    dispatch(fetchCategories());
   }, [dispatch]);
   if (status === "loading") return <p>Chargement...</p>;
   if (status === "failed") return <p>Erreur : {error}</p>;
