@@ -1,10 +1,5 @@
-import {
-  configureStore,
-  createSlice,
-  createAsyncThunk,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
 const API_URL = "http://localhost:3000/tasks"; // URL du json-server
 
 // Récupérer toutes les tâches
@@ -51,7 +46,7 @@ export const deleteTask = createAsyncThunk("todo/deleteTask", async (id) => {
   return id;
 });
 
-const todoSlice = createSlice({
+export const todoSlice = createSlice({
   name: "todo",
   initialState: { tasks: [], status: "idle", error: null },
   reducers: {},
@@ -86,8 +81,4 @@ const todoSlice = createSlice({
         state.tasks = state.tasks.filter((t) => t.id !== action.payload);
       });
   },
-});
-
-export const store = configureStore({
-  reducer: { todoo: todoSlice.reducer },
 });

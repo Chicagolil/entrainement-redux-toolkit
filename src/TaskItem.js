@@ -1,14 +1,12 @@
 import { useDispatch } from "react-redux";
-import { deleteTask, toggleTask } from "./redux";
+import { deleteTask, toggleTask } from "./redux/tasksSlice";
 import dayjs from "dayjs";
 
 const TaskItem = ({ task, selectedDate }) => {
   const dispatch = useDispatch();
 
-  // 🔥 Calcul du retard en jours
   const daysLate = dayjs(selectedDate).diff(dayjs(task.date), "day");
 
-  // 🔥 Déterminer la classe CSS selon le nombre de jours de retard
   let statusClass = "";
   if (task.done && dayjs(task.date).isSame(selectedDate, "day")) {
     statusClass = "done-today"; // ✅ Tâche terminée aujourd'hui => Verte

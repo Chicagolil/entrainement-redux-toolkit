@@ -4,25 +4,38 @@
       "id": "d4e3",
       "text": "Aller voir à omega music Liège",
       "date": "2025-02-16",
-      "done": false
+      "done": false,
+      "category": "Musique"
     },
     {
       "id": "45a3",
       "text": "Se renseigner sur les établisemment sportifs à cointe ",
       "date": "2025-02-16",
-      "done": false
+      "done": false,
+      "category": "Sport"
     },
     {
       "id": "07aa",
       "text": "Aller chercher le meta quest à la fnac ",
       "date": "2025-02-16",
-      "done": true
+      "done": true,
+      "category": "TFE"
     },
     {
       "id": "df34",
       "text": "Envoyer un message à papi",
       "date": "2025-02-16",
-      "done": false
+      "done": false,
+      "category": "Personnel"
     }
+  ],
+  "categories": [
+    "Travail",
+    "Personnel",
+    "Sport",
+    "Courses",
+    "Musique",
+    "TFE",
+    "Stages"
   ]
 }

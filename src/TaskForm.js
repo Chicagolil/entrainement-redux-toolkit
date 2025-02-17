@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "./redux";
+import { addTask } from "./redux/tasksSlice";
 import dayjs from "dayjs";
 
 const TaskForm = () => {

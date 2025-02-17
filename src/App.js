@@ -4,7 +4,6 @@ import TaskForm from "./TaskForm";
 import TasksHeader from "./TasksHeader";
 import TasksList from "./TasksList";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTasks } from "./redux";
 
 export default function App() {
   return (

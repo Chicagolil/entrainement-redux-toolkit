@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { fetchTasks } from "./redux";
+import { fetchTasks } from "./redux/tasksSlice";
 import TaskItem from "./TaskItem";
 import dayjs from "dayjs";
 import "dayjs/locale/fr";

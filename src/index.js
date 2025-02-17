@@ -4,7 +4,7 @@ import "@picocss/pico";
 
 import App from "./App";
 import { Provider } from "react-redux";
-import { store } from "./redux";
+import { store } from "./redux/redux";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
