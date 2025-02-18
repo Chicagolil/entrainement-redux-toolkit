@@ -15,6 +15,9 @@ const TasksList = () => {
   const [selectedDate, setSelectedDate] = useState(
     dayjs().format("YYYY-MM-DD")
   );
+  const [selectedCategory, setSelectedCategory] = useState("Toutes");
+
+  const categories = useSelector((state) => state.categories);
 
   useEffect(() => {
     dispatch(fetchTasks());
@@ -30,9 +33,11 @@ const TasksList = () => {
   };
 
   const filteredTasks = tasks.filter((task) => {
-    if (task.date === selectedDate) return true;
-
-    return !task.done && dayjs(task.date).isBefore(selectedDate);
+    return (
+      (task.date === selectedDate ||
+        (!task.done && dayjs(task.date).isBefore(selectedDate, "day"))) &&
+      (selectedCategory === "Toutes" || task.category === selectedCategory)
+    );
   });
 
   return (
@@ -50,6 +55,19 @@ const TasksList = () => {
         <h2>{dayjs(selectedDate).format("DD MMMM YYYY")}</h2>
         <h1 onClick={() => changeDay(1)}> ▶</h1>
       </div>
+      <div>
+        <select onChange={(e) => setSelectedCategory(e.target.value)}>
+          <option name="Toutes">Toutes</option>
+          {categories.categories.map((category) => {
+            return (
+              <option name={category.nom} key={category.id}>
+                {category.nom}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+
       {filteredTasks.length > 0 ? (
         filteredTasks.map((t) => (
           <TaskItem task={t} key={t.id} selectedDate={selectedDate} />

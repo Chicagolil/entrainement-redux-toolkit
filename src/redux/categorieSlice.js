@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { deleteTask } from "./tasksSlice";
 
 const API_URL = "http://localhost:3000/categories";
 
@@ -25,9 +24,8 @@ export const addCategories = createAsyncThunk(
 export const deleteCategories = createAsyncThunk(
   "categories/deleteCategories",
   async (id) => {
-    const response = await axios.delete(`${API_URL}/${id}`);
-    console.log(response);
-    return response.data;
+    await axios.delete(`${API_URL}/${id}`);
+    return id;
   }
 );
 

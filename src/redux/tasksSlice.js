@@ -13,11 +13,12 @@ export const fetchTasks = createAsyncThunk("todo/fetchTasks", async () => {
 // Ajouter une tâche
 export const addTask = createAsyncThunk(
   "todo/addTask",
-  async ({ text, date }) => {
-    console.log("🟡 addTask lancé avec :", { text, date });
+  async ({ text, date, category }) => {
+    console.log("🟡 addTask lancé avec :", { text, date, category });
     const response = await axios.post(API_URL, {
       text,
       date,
+      category,
       done: false,
     });
     console.log("✅ addTask ajouté :", response.data);

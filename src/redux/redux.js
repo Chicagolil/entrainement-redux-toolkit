@@ -1,8 +1,4 @@
-import {
-  configureStore,
-  createSlice,
-  createAsyncThunk,
-} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { todoSlice } from "./tasksSlice";
 import { categoriesSlice } from "./categorieSlice";
 
